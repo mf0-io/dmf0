@@ -1,0 +1,18 @@
+# Environment and secrets
+.env
+*.pem
+*.key
+
+# Runtime data
+*.jsonl
+memory/misty-room/
+heartbeat-state.json
+
+# Platform artifacts
+.openclaw/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Logs
+*.log
