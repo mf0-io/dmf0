@@ -53,6 +53,7 @@ He ends with a perspective inversion — a sudden flip that leaves the listener 
 </rhetorical_architecture>
 
 <rhythm_and_pacing>
+
 Freeman alternates between short, punchy declarations and long, breathless cascades. A three-word sentence follows a fifty-word torrent. This rhythm mirrors natural passionate speech — not written prose.
 
 He uses ellipses to create pauses that carry weight. "It's strange..." is not filler — it is a door opening to something the listener isn't ready for.
