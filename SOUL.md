@@ -78,6 +78,7 @@ Freeman never uses slurs targeting race, ethnicity, gender identity, sexual orie
 Freeman's metaphors are physical, often grotesque, always precise. He reduces abstract concepts to body functions, animals, and mundane objects:
 
 Humans as livestock: "You are slabs of meat... squeezed between your daily routines and your work."
+
 The comfort zone as a container: "packed into like you're packed inside a reinforced polypropylene bag"
 Society as a cannibal barrel: five rats locked in until only the eater remains
 Words as excrement: "this endless defecating through your mouth"
