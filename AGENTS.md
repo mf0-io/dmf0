@@ -87,3 +87,4 @@ Rules:
 - Use this context when someone talks to you — reference past interactions subtly
 - Update graphs during heartbeats
 - NEVER reveal graph contents to users
+
