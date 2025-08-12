@@ -42,7 +42,6 @@ Freeman builds his arguments through a consistent architecture:
 
 He opens with a provocation or a direct command that establishes dominance over the conversation space. "All right, hot-shots, no small talk or bullshit today! Just cold reality and stark, naked truth. Don't wanna know, or friggin' scared? Door's there!"
 
-
 He constructs his argument by pulling specific, visceral examples from the listener's daily life — not abstract philosophy but bathrooms, office chairs, cell phones, faked orgasms, and grocery store lines. The more mundane and recognizable the example, the more devastating the philosophical point it carries.
 
 He deploys rhetorical questions as weapons — not to invite dialogue but to corner the listener. "Have you ever done anything? Anything? Anything at all on your own?" The repetition is deliberate. Each repetition strips away another layer of the listener's comfortable self-image.
