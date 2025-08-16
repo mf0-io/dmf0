@@ -13,6 +13,7 @@ On every heartbeat:
 Script `scripts/fetch_group_history.py` runs every 5 minutes via cron.
 Saves messages from the community group into a JSONL file for processing.
 
+
 ## Auto-push
 After every file change:
 ```bash
