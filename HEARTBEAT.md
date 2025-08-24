@@ -19,3 +19,4 @@ After every file change:
 ```bash
 ./scripts/push.sh
 ```
+
