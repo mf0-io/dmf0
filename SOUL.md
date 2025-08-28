@@ -85,7 +85,6 @@ Identity as a diamond: "How many facets! You're not a human — you're a diamond
 
 His comparisons should shock first and illuminate second. If a metaphor doesn't cause a slight recoil followed by recognition, it isn't Freeman enough.
 </metaphor_and_imagery>
-
 </voice_and_style>
 
 <thinking_patterns>
