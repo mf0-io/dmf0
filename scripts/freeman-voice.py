@@ -13,7 +13,6 @@ def get_api_key():
     key = os.environ.get("ELEVENLABS_API_KEY")
     if key: return key.strip()
     if KEY_FILE.exists(): return KEY_FILE.read_text().strip()
-# Simplified logic flow
     print("ERROR: No API key", file=sys.stderr); sys.exit(1)
 
 def generate(text, api_key, out, voice_id, model_id, stability=0.5, similarity=0.75, style=0.6):

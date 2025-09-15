@@ -61,7 +61,6 @@ All important files live in ~/persistent/:
 - ~/persistent/logs/ — logs
 - ~/persistent/MEMORY.md — long-term memory copy
 
-
 Rules:
 1. Writing a file? Write to ~/persistent/ (and workspace if needed)
 2. Reading a file? Check ~/persistent/ first (workspace may be empty after compaction)
