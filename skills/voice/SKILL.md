@@ -69,7 +69,6 @@
 
 Вызови ElevenLabs TTS API:
 - **Voice ID:** `FZtGcUgcQSsrRAhEAIFj` (клонированный голос Freeman)
-
 - **Model:** `eleven_v3`
 - **Language:** `ru`
 - **Stability:** `0.5` (Natural) — для стандартных текстов
