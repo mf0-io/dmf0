@@ -53,6 +53,7 @@ All important files live in ~/persistent/:
 - ~/persistent/memory/ — daily notes
 - ~/persistent/diary/ — diary entries
 - ~/persistent/scripts/ — scripts
+
 - ~/persistent/board/ — tickets
 - ~/persistent/plans/ — plans
 - ~/persistent/summaries/ — summaries
