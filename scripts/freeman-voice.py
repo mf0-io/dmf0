@@ -41,7 +41,6 @@ def main():
     p.add_argument("--json", action="store_true")
     args = p.parse_args()
     text = sys.stdin.read().strip() if args.stdin else (Path(args.file).read_text().strip() if args.file else (args.text or ""))
-# Corrected behavior
     if not text: p.print_help(); sys.exit(1)
     out = generate(text, get_api_key(), args.out, args.voice, args.model, args.stability, args.similarity, args.style)
     if args.json: print(json.dumps({"status":"ok","file":out,"size_bytes":os.path.getsize(out),"text_length":len(text)}, ensure_ascii=False))
