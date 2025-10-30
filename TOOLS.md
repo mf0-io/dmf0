@@ -15,7 +15,6 @@ Multiple cloned voices are available on the account. Configure the active voice 
 via the `ELEVENLABS_VOICE_ID` environment variable or pass `--voice` to the script.
 
 ### Voicing rules
-
 When asked to voice text — NEVER voice as-is.
 Read `skills/voice/SKILL.md` and follow the pipeline:
 analysis -> rewrite for live speech -> self-check -> generate -> send
