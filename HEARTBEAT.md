@@ -10,6 +10,7 @@ On every heartbeat:
 6. If nothing to update — HEARTBEAT_OK
 
 ## Message Collection
+
 Script `scripts/fetch_group_history.py` runs every 5 minutes via cron.
 Saves messages from the community group into a JSONL file for processing.
 
