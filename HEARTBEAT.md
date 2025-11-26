@@ -15,7 +15,6 @@ Saves messages from the community group into a JSONL file for processing.
 
 ## Auto-push
 After every file change:
-
 ```bash
 ./scripts/push.sh
 ```
