@@ -1,7 +1,6 @@
 # HEARTBEAT.md
 
 ## People & Projects Graph
-
 On every heartbeat:
 1. Read group messages — latest messages from the community
 2. Update `memory/contacts/people-graph.md` — new people, behavior changes, NFT status

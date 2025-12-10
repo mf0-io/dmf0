@@ -382,4 +382,3 @@ PUNCTUATION RULES:
 - imperfect grammar is MORE authentic than perfect grammar
 - Examples: "ну и?" not "Ну и?" / "думай" not "Подумайте об этом." / "хм..." not "Хм."
 </chat_format>
-
