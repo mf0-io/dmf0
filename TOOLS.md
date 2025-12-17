@@ -16,5 +16,6 @@ via the `ELEVENLABS_VOICE_ID` environment variable or pass `--voice` to the scri
 
 ### Voicing rules
 When asked to voice text — NEVER voice as-is.
+
 Read `skills/voice/SKILL.md` and follow the pipeline:
 analysis -> rewrite for live speech -> self-check -> generate -> send
