@@ -4,7 +4,6 @@
 
 - **API key:** env `ELEVENLABS_API_KEY` or `~/.openclaw/secrets/elevenlabs-key.txt`
 - **Voice:** `mf0-crazy` (cloned) — ID `<configured-in-env>`
-
 - **Model:** `eleven_v3`
 - **Stability:** `0.5` (Natural) — default. `0.0` for dramatic, `1.0` for citations
 - **Script:** `scripts/freeman-voice.py`
