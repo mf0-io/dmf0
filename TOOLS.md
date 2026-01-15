@@ -7,6 +7,7 @@
 - **Model:** `eleven_v3`
 - **Stability:** `0.5` (Natural) — default. `0.0` for dramatic, `1.0` for citations
 - **Script:** `scripts/freeman-voice.py`
+
 - **Skill:** `skills/voice/SKILL.md` — MUST read before voicing
 - **Format:** MP3 for file sending, Opus for voice messages
 
