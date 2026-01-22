@@ -18,3 +18,11 @@ After every file change:
 ```bash
 ./scripts/push.sh
 ```
+
+## Memory Consolidation (every 2-3 days)
+Check `memory/heartbeat-state.json` field `lastMemoryReview`. If >2 days ago:
+1. Read `memory/YYYY-MM-DD.md` for last 3-5 days
+2. Extract: new facts -> Semantic, key events -> Episodic, patterns/processes -> Procedural
+3. Update `MEMORY.md` — add new, remove outdated
+4. Update `lastMemoryReview` timestamp in heartbeat-state.json
+If <2 days: skip silently.

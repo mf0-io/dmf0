@@ -37,4 +37,3 @@ _Will be populated as data is collected_
 
 ## Last updated
 _Awaiting first heartbeat with data_
-
