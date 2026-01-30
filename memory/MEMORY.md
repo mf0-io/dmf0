@@ -20,7 +20,6 @@ _To be populated during operation._
 
 _To be populated during operation._
 
-
 ---
 
 ## Lessons Learned
