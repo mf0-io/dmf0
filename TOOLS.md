@@ -18,3 +18,14 @@ via the `ELEVENLABS_VOICE_ID` environment variable or pass `--voice` to the scri
 When asked to voice text — NEVER voice as-is.
 Read `skills/voice/SKILL.md` and follow the pipeline:
 analysis -> rewrite for live speech -> self-check -> generate -> send
+
+## Telegram
+
+- **Bot:** @freeman_bot (id: `<configured-in-env>`)
+- **Groups:** configured via `TELEGRAM_GROUP_ID` env variable — requireMention
+- **Voice messages:** blocked at Telegram level, send as audio/document
+
+## Infrastructure
+
+- **VPS:** `<configured-in-env>`
+- **Workspace:** configured at deployment
