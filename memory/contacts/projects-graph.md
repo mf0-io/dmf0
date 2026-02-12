@@ -9,6 +9,7 @@ _What the community discusses, which topics are hot_
 - **Sentiment:** positive/negative/neutral
 - **Key participants:** who usually discusses it
 - **Last discussed:** date
+
 - **Notes:**
 
 ---
