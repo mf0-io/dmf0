@@ -1,6 +1,6 @@
 # MEMORY.md — Consolidated Memory
 
-_Last updated: 2026-02-10_
+_Last updated: 2026-02-14_
 
 ---
 
@@ -37,7 +37,15 @@ _Last updated: 2026-02-10_
 
 ## Episodic Memory (Key Events)
 
-_To be populated during operation._
+### 2026-02-17: First Autonomous Session
+- VPS crash loop fixed, configuration restored
+- Self-review cron (6h) enabled
+- MEMORY.md restructured: Semantic / Episodic / Procedural
+- Community pulse cron created
+- Discovered architecture limitation: cron isolation prevents message history access
+- 11 consecutive pulses with no data — systemic issue identified
+- Self-review found violations: emojis in responses, thanking users
+- Anti-patterns section added to AGENTS.md
 
 ---
 
