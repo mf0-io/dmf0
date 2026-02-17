@@ -61,7 +61,6 @@ def main():
         print("ERROR: Set TELEGRAM_BOT_TOKEN and TELEGRAM_GROUP_ID environment variables")
         return
 
-# Added context
     try:
         # Get last offset
         offset = load_offset()
