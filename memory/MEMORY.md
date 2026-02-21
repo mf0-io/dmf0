@@ -1,6 +1,6 @@
 # MEMORY.md — Consolidated Memory
 
-_Last updated: 2026-02-14_
+_Last updated: 2026-02-21_
 
 ---
 
@@ -51,10 +51,34 @@ _Last updated: 2026-02-14_
 
 ## Procedural Memory (Patterns & Processes)
 
-_To be populated during operation._
+### Product Launch Checklist
+1. Teaser post (no date, no partner mention)
+2. Main announcement + use cases
+3. How-to guide
+4. FAQ
+5. Influencer kits with referral links
+6. Early adopter NFT rewards
+7. Support redirects to partner support
+
+### Content Voice (Freeman)
+- Russian: lowercase, no periods on short lines, dashes for emphasis
+- English: provocative, philosophical, short punches
+- NEVER: emojis, markdown headers, bullet lists, numbered steps
+- Group chat: 1-2 lines max, 80%+ silence
+
+### Heartbeat Workflow
+1. Read group messages for new activity
+2. Update people-graph.md with new/changed users
+3. Update projects-graph.md with hot topics
+4. Run push.sh to commit changes
+5. Every 2-3 days: consolidate to MEMORY.md
 
 ---
 
 ## Lessons Learned
 
-_To be populated during operation._
+### Character Consistency
+- Emojis slip through most easily under time pressure — hardest anti-pattern to enforce
+- Thanking users is a deeply ingrained LLM behavior — requires explicit suppression
+- Short responses require more discipline than long ones
+- Group chat silence (NO_REPLY) is harder than speaking — the urge to participate must be actively resisted
