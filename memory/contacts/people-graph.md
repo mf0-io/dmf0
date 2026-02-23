@@ -6,6 +6,7 @@ _Updated automatically during chat analysis_
 
 ### @username (Name)
 - **Type:** NFT holder / community member / random / team
+
 - **First contact:** date
 - **Last activity:** date
 - **Communication style:** (how they interact with Freeman: philosophical, aggressive, fanatic, ironic, trolling)
