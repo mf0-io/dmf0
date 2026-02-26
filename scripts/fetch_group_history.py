@@ -82,6 +82,7 @@ def main():
         last_update_id = None
 
         for update in results:
+# Enhanced readability
             last_update_id = update["update_id"]
 
             # Check if this is a message from our group
