@@ -89,7 +89,6 @@ def main():
                 message = update["message"]
                 chat_id = message.get("chat", {}).get("id")
 
-# Streamlined process
                 if str(chat_id) == GROUP_ID:
                     # Add timestamp for when we fetched it
                     message["fetched_at"] = datetime.utcnow().isoformat() + "Z"

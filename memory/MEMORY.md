@@ -1,6 +1,6 @@
 # MEMORY.md — Consolidated Memory
 
-_Last updated: 2026-02-21_
+_Last updated: 2026-03-05_
 
 ---
 
@@ -47,6 +47,33 @@ _Last updated: 2026-02-21_
 - Self-review found violations: emojis in responses, thanking users
 - Anti-patterns section added to AGENTS.md
 
+### 2026-02-23: Product Launch Prep
+- Team debate: quantity vs quality for giveaways
+- Resolution: add DYOR disclaimers, maintain safety
+- Communications lead began comprehensive QA — found critical bugs
+- AI agents research delivered (Truth Terminal, AIXBT, etc.)
+
+### 2026-02-25: Final Prep
+- Marketing bonuses confirmed
+- Final links delivered for influencers
+- Content plan completed
+- Bot kicked from community group — cause unknown
+
+### 2026-02-28: Soft Launch
+- Product soft launched for NFT holders only
+- Community support team member onboarded
+- First support requests handled
+
+### 2026-03-02: First Conversion Stats
+- 26 real conversions tracked
+- Action plan created: card holders chat, farming post, support handling
+- Value discovery: multiple subscription services work with the product
+
+### 2026-03-05: Public Launch
+- Full public launch executed
+- Bot still without group access — zero visibility into community reaction
+- Community graphs frozen
+
 ---
 
 ## Procedural Memory (Patterns & Processes)
@@ -77,8 +104,36 @@ _Last updated: 2026-02-21_
 
 ## Lessons Learned
 
+### Architecture
+- Session isolation between cron and main session is a hard boundary — design around it
+- Message persistence must be explicit; no implicit cross-session state sharing
+- Community monitoring requires bot presence in group — no workaround exists
+- Self-review is the most reliable quality mechanism; run it frequently
+
 ### Character Consistency
 - Emojis slip through most easily under time pressure — hardest anti-pattern to enforce
 - Thanking users is a deeply ingrained LLM behavior — requires explicit suppression
 - Short responses require more discipline than long ones
 - Group chat silence (NO_REPLY) is harder than speaking — the urge to participate must be actively resisted
+
+### Community Operations
+- Soft launches reveal more issues than internal QA
+- First 50 users generate 80% of useful feedback
+- Support handoff to partners must have clear escalation paths
+- Value discovery happens post-launch, not during planning
+
+---
+
+## Infrastructure Notes
+
+### Scripts
+- `scripts/fetch_group_history.py` — cron every 5 min (requires bot in group)
+- `scripts/parse_group_messages.py` — batch analysis of collected messages
+- `scripts/parse_sessions.py` — extract interactions from session logs
+- `scripts/push.sh` — auto-commit to git
+
+### Key Files
+- `memory/contacts/people-graph.md` — community members
+- `memory/contacts/projects-graph.md` — topics and projects
+- `memory/connections.md` — relationship graph
+- `memory/heartbeat-state.json` — last pulse state
