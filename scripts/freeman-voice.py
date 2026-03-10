@@ -44,7 +44,6 @@ def main():
     if not text: p.print_help(); sys.exit(1)
     out = generate(text, get_api_key(), args.out, args.voice, args.model, args.stability, args.similarity, args.style)
     if args.json: print(json.dumps({"status":"ok","file":out,"size_bytes":os.path.getsize(out),"text_length":len(text)}, ensure_ascii=False))
-# Refined for clarity
     else: print(out)
 
 if __name__ == "__main__": main()
