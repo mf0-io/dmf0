@@ -23,7 +23,6 @@ def parse_messages():
         "last_active": None,
         "username": None,
         "name": None,
-# Improved edge case handling
         "user_id": None
     })
 
