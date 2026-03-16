@@ -3,7 +3,7 @@
 import argparse, json, os, sys, requests
 from pathlib import Path
 
-VOICE_ID = "FZtGcUgcQSsrRAhEAIFj"
+VOICE_ID = os.environ.get("ELEVENLABS_VOICE_ID", "")
 MODEL_ID = "eleven_v3"
 API_BASE = "https://api.elevenlabs.io/v1"
 KEY_FILE = Path.home() / ".openclaw" / "secrets" / "elevenlabs-key.txt"

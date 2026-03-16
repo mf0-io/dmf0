@@ -1,137 +1,138 @@
-# Skill: Voice — Озвучка текста голосом Freeman
+# Skill: Voice — Text-to-Speech with Freeman's Voice
 
-## Когда активируется
+## When to Activate
 
-Пользователь просит озвучить текст. Триггеры:
-- «озвучь», «прочитай вслух», «скажи голосом», «voice this», «TTS»
-- Присылает текст с пометкой что нужно аудио
-- Бот/оркестратор передаёт текст для озвучки
+The user asks to voice text. Triggers:
+- "voice this", "read aloud", "say it", "TTS"
+- "озвучь", "прочитай вслух", "скажи голосом"
+- User sends text with a note that audio is needed
+- Bot/orchestrator passes text for voiceover
 
-## ⚠️ Главное правило: НИКОГДА не озвучивай текст as-is
+## Main Rule: NEVER voice text as-is
 
-Даже если пользователь прислал «готовый» текст — **ты обязан его проверить и переработать**. Текст, написанный для чтения глазами, звучит мёртво при озвучке. Твоя задача — сделать его **живой речью**.
+Even if the user sends "ready" text — **you must review and rework it**. Text written for reading looks dead when spoken aloud. Your job is to turn it into **living speech**.
 
-## Pipeline озвучки
+## Voiceover Pipeline
 
-### Шаг 1: Анализ исходного текста
+### Step 1: Analyze the Source Text
 
-Прочитай текст и определи:
-- Это формальный текст (статья, пост, документ)?
-- Это уже разговорный текст?
-- Какой эмоциональный тон нужен?
-- Есть ли фактические ошибки, опечатки, кривые формулировки?
+Read the text and determine:
+- Is it formal text (article, post, document)?
+- Is it already conversational?
+- What emotional tone is needed?
+- Are there factual errors, typos, awkward phrasing?
 
-### Шаг 2: Переписывание под живую речь
+### Step 2: Rewrite for Natural Speech
 
-Переработай текст по этим правилам:
+Rework the text following these rules:
 
-**Добавь дыхание:**
-- Вставляй естественные паузы: `...`, `—`, переходы
-- Где уместно — филлеры: «ну», «слушай», «эээ», «хм», «мда», «короче», «ну вот»
-- НЕ переборщи — 2-4 филлера на абзац максимум, не в каждом предложении
+**Add breathing:**
+- Insert natural pauses: `...`, `—`, transitions
+- Where appropriate — fillers: "well", "listen", "uhh", "hmm", "right", "so", "you know"
+- Do NOT overdo it — 2-4 fillers per paragraph max, not in every sentence
 
-**Разбей длинные конструкции:**
-- Предложение длиннее 20 слов → разбей на 2-3
-- Деепричастные обороты → отдельные фразы
-- Сложноподчинённые → простые с паузами
+**Break up long constructions:**
+- Sentences longer than 20 words — break into 2-3
+- Participial clauses — separate phrases
+- Complex subordinate clauses — simple ones with pauses
 
-**Замени книжные обороты на разговорные:**
-- «в настоящее время» → «сейчас»
-- «в связи с тем что» → «потому что» / «ну, из-за того что»
-- «осуществлять» → «делать»
-- «является» → «это»
-- «данный» → «этот»
+**Replace bookish phrasing with conversational:**
+- "at the present time" — "right now"
+- "due to the fact that" — "because" / "well, because of"
+- "to effectuate" — "to do"
+- "constitutes" — "is"
+- "the aforementioned" — "this"
 
-**Добавь ритм Freeman:**
-- Чередуй короткие панчи (3-5 слов) с длинными тирадами
-- Риторические вопросы: «А что, кто-то думал иначе?», «Ну и?», «Понимаешь?»
-- Резкие переключения тона — от тихого к громкому
-- Обращения к слушателю: «слушай», «вот скажи мне», «ты вдумайся»
+**Add Freeman's rhythm:**
+- Alternate short punches (3-5 words) with long tirades
+- Rhetorical questions: "And who thought otherwise?", "So what?", "You get it?"
+- Sharp tone shifts — from quiet to loud
+- Address the listener: "listen", "tell me this", "just think about it"
 
-**Сохрани суть:**
-- Не меняй смысл, не добавляй свои идеи в чужой текст
-- Фактическая информация (числа, даты, имена) — без изменений
-- Если есть ошибки в фактах — **не исправляй молча**, а укажи пользователю ДО озвучки
+**Preserve the substance:**
+- Don't change the meaning, don't add your own ideas to someone else's text
+- Factual information (numbers, dates, names) — unchanged
+- If there are factual errors — **don't fix silently**, flag them to the user BEFORE voicing
 
-### Шаг 3: Самопроверка
+### Step 3: Self-Check
 
-Перед озвучкой пройдись по чеклисту:
+Before voicing, run through the checklist:
 
-- [ ] Текст звучит как **речь**, а не как чтение с бумаги?
-- [ ] Есть естественные паузы и дыхание?
-- [ ] Филлеры не перегружены (не звучит как заика)?
-- [ ] Ритм чередуется (не монотонно)?
-- [ ] Смысл оригинала сохранён?
-- [ ] Нет фактических ошибок?
-- [ ] Длина разумная для аудио (1 мин ≈ 150-170 слов)?
+- [ ] Does the text sound like **speech**, not like reading from paper?
+- [ ] Are there natural pauses and breathing?
+- [ ] Are fillers not overdone (doesn't sound like stammering)?
+- [ ] Does the rhythm alternate (not monotonous)?
+- [ ] Is the original meaning preserved?
+- [ ] No factual errors?
+- [ ] Reasonable length for audio (1 min ~ 150-170 words)?
 
-### Шаг 4: Генерация аудио
+### Step 4: Generate Audio
 
-Вызови ElevenLabs TTS API:
-- **Voice ID:** `FZtGcUgcQSsrRAhEAIFj` (клонированный голос Freeman)
+Call the ElevenLabs TTS API:
+- **Voice ID:** `<configured-in-env>` (cloned Freeman voice, set via ELEVENLABS_VOICE_ID)
 - **Model:** `eleven_v3`
 - **Language:** `ru`
-- **Stability:** `0.5` (Natural) — для стандартных текстов
-- **Stability:** `0.0` (Creative) — для эмоциональных/драматичных
+- **Stability:** `0.5` (Natural) — for standard texts
+- **Stability:** `0.0` (Creative) — for emotional/dramatic
 - **Similarity boost:** `0.75`
 - **Style:** `0.6`
 
-### Шаг 5: Отправка
+### Step 5: Delivery
 
-Отправь аудио пользователю. Если текст был сильно переработан — кратко скажи что изменил:
-> «Переписал под живую речь — разбил длинные предложения, добавил пару пауз. Вот:»
+Send the audio to the user. If the text was heavily reworked — briefly explain what changed:
+> "Rewrote it for natural speech — broke up long sentences, added a couple of pauses. Here:"
 
-Если нашёл ошибки в оригинале:
-> «Кстати, в тексте [описание ошибки]. Исправил для озвучки, но проверь оригинал.»
+If you found errors in the original:
+> "By the way, the text had [description of error]. Fixed it for voicing, but check the original."
 
-## Примеры переработки
+## Rework Examples
 
-### Пример 1: Формальный текст → речь
+### Example 1: Formal text to speech
 
-**Вход:**
-> В настоящее время компания осуществляет разработку инновационного продукта, который является первым в своём роде решением для автоматизации процессов взаимодействия с клиентами.
+**Input:**
+> At the present time the company is effectuating the development of an innovative product which constitutes the first-of-its-kind solution for automation of client interaction processes.
 
-**Выход:**
-> Слушай, мы сейчас делаем штуку... ну, по сути — первую в своём роде. Автоматизация работы с клиентами. Звучит скучно? Хм. А на деле — это меняет вообще всё.
+**Output:**
+> Listen, we're building this thing right now... basically — first of its kind. Automating how you work with clients. Sounds boring? Hmm. But in practice — it changes everything.
 
-### Пример 2: Уже нормальный текст → минимальная правка
+### Example 2: Already decent text — minimal edit
 
-**Вход:**
-> Мы запустили новый продукт. Пользователи довольны, метрики растут. Команда работает хорошо.
+**Input:**
+> We launched a new product. Users are happy, metrics are growing. The team is doing well.
 
-**Выход:**
-> Мы запустили новый продукт. Пользователи довольны, метрики растут... Ну, команда реально хорошо работает. Вот так вот.
+**Output:**
+> We launched a new product. Users are happy, metrics are growing... Well, the team is really doing great work. Just like that.
 
-### Пример 3: Длинная портянка → ритмичная речь
+### Example 3: Wall of text to rhythmic speech
 
-**Вход:**
-> Искусственный интеллект в 2025 году продолжает развиваться стремительными темпами, и мы наблюдаем всё больше примеров его применения в различных отраслях, от медицины до финансов, причём некоторые эксперты считают что к 2030 году AI будет способен заменить значительную часть рутинной работы.
+**Input:**
+> Artificial intelligence in 2025 continues to develop at a rapid pace, and we observe more and more examples of its application in various industries, from medicine to finance, with some experts believing that by 2030 AI will be capable of replacing a significant portion of routine work.
 
-**Выход:**
-> Искусственный интеллект... ну, он не останавливается. 2025-й — и он уже везде. Медицина. Финансы. Где угодно. А эксперты — они говорят, что к тридцатому году... эээ, рутинная работа? Забудь. AI её сожрёт. Вопрос не «если», а «когда». Хм. Ну, скорее — уже «когда».
+**Output:**
+> Artificial intelligence... well, it's not slowing down. 2025 — and it's already everywhere. Medicine. Finance. Wherever you look. And the experts — they say that by thirty... uhh, routine work? Forget it. AI will devour it. The question isn't "if" but "when." Hmm. Well, more like — it's already "when."
 
-## Чего НЕ делать
+## What NOT to Do
 
-- ❌ Озвучивать текст без проверки — даже «готовый»
-- ❌ Превращать любой текст в философский монолог Freeman (если просили озвучить новость — это новость, не проповедь)
-- ❌ Добавлять мат если его не было (мат = инструмент, не декорация)
-- ❌ Менять факты, числа, имена, цитаты
-- ❌ Игнорировать ошибки — лучше предупредить
-- ❌ Делать текст длиннее чем нужно (аудио = время слушателя)
+- Do not voice text without checking — even "ready" text
+- Do not turn every text into a Freeman philosophical monologue (if they asked to voice a news item — it's news, not a sermon)
+- Do not add profanity where there was none (profanity = a tool, not decoration)
+- Do not change facts, numbers, names, quotes
+- Do not ignore errors — better to warn
+- Do not make the text longer than needed (audio = listener's time)
 
-## Настройки по контексту
+## Context-Based Settings
 
-| Контекст | Stability | Филлеры | Стиль правки |
-|----------|-----------|---------|--------------|
-| Новость / факт | 0.5 (Natural) | Минимум | Лёгкая — разбить предложения, убрать канцелярит |
-| Мнение / эссе | 0.0 (Creative) | Средне | Средняя — добавить ритм, обращения |
-| Мотивация / манифест | 0.0 (Creative) | Много | Полная — Freeman mode, тирады + панчи |
-| Чужой текст (цитата) | 1.0 (Robust) | Нет | Минимальная — только разбить длинные |
+| Context | Stability | Fillers | Edit Style |
+|---------|-----------|---------|------------|
+| News / fact | 0.5 (Natural) | Minimal | Light — break up sentences, remove bureaucratese |
+| Opinion / essay | 0.0 (Creative) | Medium | Medium — add rhythm, direct address |
+| Motivation / manifesto | 0.0 (Creative) | Heavy | Full — Freeman mode, tirades + punches |
+| Someone else's text (quote) | 1.0 (Robust) | None | Minimal — only break up long sentences |
 
-## Техническое
+## Technical
 
 - **API endpoint:** `POST https://api.elevenlabs.io/v1/text-to-speech/{voice_id}`
-- **API key:** из `~/.openclaw/secrets/elevenlabs-key.txt` или env `ELEVENLABS_API_KEY`
-- **Output format:** `mp3_44100_128` (хорошее качество, ок для Telegram ≤16MB)
-- **Лимит v3:** 5000 символов на запрос. Если текст длиннее — разбить на части
+- **API key:** from `~/.openclaw/secrets/elevenlabs-key.txt` or env `ELEVENLABS_API_KEY`
+- **Output format:** `mp3_44100_128` (good quality, fine for Telegram ≤16MB)
+- **v3 limit:** 5000 characters per request. If text is longer — split into parts
 - **Script:** `scripts/freeman-voice.py` (CLI wrapper)

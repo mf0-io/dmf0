@@ -99,7 +99,7 @@ def update_dossiers(users):
             in_timeline = False
 
             for line in lines:
-                if '## Темпоральная лента' in line:
+                if '## Temporal Feed' in line:
                     in_timeline = True
 
                 new_lines.append(line)
@@ -114,24 +114,24 @@ def update_dossiers(users):
             first_seen = data['first_seen'][:10] if data['first_seen'] else 'unknown'
             last_active = data['last_active'][:16].replace('T', ' ') if data['last_active'] else 'unknown'
 
-            dossier_content = f"""# Досье: {username}
+            dossier_content = f"""# Dossier: {username}
 
-## Профиль
-- **Платформа:** {', '.join(data['platforms'])}
+## Profile
+- **Platform:** {', '.join(data['platforms'])}
 - **ID:** {', '.join(data['ids'])}
-- **Имя:** {username}
-- **NFT holder:** неизвестно
-- **Первый контакт:** {first_seen}
-- **Последняя активность:** {last_active}
-- **Всего взаимодействий:** {len(data['interactions'])}
+- **Name:** {username}
+- **NFT holder:** unknown
+- **First contact:** {first_seen}
+- **Last active:** {last_active}
+- **Total interactions:** {len(data['interactions'])}
 
-## Теги
+## Tags
 needs_analysis
 
-## Связи
-_Будет заполнено при анализе_
+## Connections
+_To be filled during analysis_
 
-## Темпоральная лента
+## Temporal Feed
 """
 
             # Add interactions grouped by date
@@ -146,7 +146,7 @@ _Будет заполнено при анализе_
                 for time in sorted(interactions_by_date[date], reverse=True):
                     dossier_content += f"- {time} — session interaction\n"
 
-            dossier_content += "\n## Заметки\n_Автоматически создано парсером_\n"
+            dossier_content += "\n## Notes\n_Automatically created by parser_\n"
 
             with open(dossier_path, 'w') as f:
                 f.write(dossier_content)

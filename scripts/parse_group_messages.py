@@ -95,15 +95,15 @@ def update_dossier(username, data):
     message_count = len(data["messages"])
 
     # If dossier exists, just update counters
-    if existing_content and "## Профиль" in existing_content:
+    if existing_content and ("## Profile" in existing_content or "## Профиль" in existing_content):
         lines = existing_content.split('\n')
         new_lines = []
 
         for i, line in enumerate(lines):
-            if '**Последняя активность:**' in line:
-                new_lines.append(f"- **Последняя активность:** {last_active}")
-            elif '**Всего взаимодействий:**' in line:
-                new_lines.append(f"- **Всего взаимодействий:** {message_count}")
+            if '**Last active:**' in line:
+                new_lines.append(f"- **Last active:** {last_active}")
+            elif '**Total interactions:**' in line:
+                new_lines.append(f"- **Total interactions:** {message_count}")
             else:
                 new_lines.append(line)
 
@@ -112,7 +112,7 @@ def update_dossier(username, data):
             # Find timeline section
             timeline_idx = -1
             for i, line in enumerate(new_lines):
-                if '## Темпоральная лента' in line:
+                if '## Temporal Feed' in line:
                     timeline_idx = i
                     break
 
@@ -141,25 +141,25 @@ def update_dossier(username, data):
         return True
 
     # Create new dossier
-    dossier_content = f"""# Досье: {username}
+    dossier_content = f"""# Dossier: {username}
 
-## Профиль
-- **Платформа:** Telegram
+## Profile
+- **Platform:** Telegram
 - **ID:** {data['user_id']}
-- **Имя:** {data['name']}
+- **Name:** {data['name']}
 - **Username:** {username}
-- **NFT holder:** неизвестно
-- **Первый контакт:** {first_seen}
-- **Последняя активность:** {last_active}
-- **Всего взаимодействий:** {message_count}
+- **NFT holder:** unknown
+- **First contact:** {first_seen}
+- **Last active:** {last_active}
+- **Total interactions:** {message_count}
 
-## Теги
+## Tags
 needs_analysis
 
-## Связи
-_Будет заполнено при анализе_
+## Connections
+_To be filled during analysis_
 
-## Темпоральная лента
+## Temporal Feed
 """
 
     # Add messages grouped by date
@@ -175,7 +175,7 @@ _Будет заполнено при анализе_
             preview = text[:80] + "..." if len(text) > 80 else text
             dossier_content += f"- {time} — {preview}\n"
 
-    dossier_content += "\n## Заметки\n_Автоматически создано из группового чата_\n"
+    dossier_content += "\n## Notes\n_Automatically created from group chat_\n"
 
     with open(dossier_path, 'w') as f:
         f.write(dossier_content)

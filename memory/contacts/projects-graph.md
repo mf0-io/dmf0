@@ -16,4 +16,3 @@ _What the community discusses, which topics are hot_
 _Entries are added below as chat data is analyzed_
 
 ---
-

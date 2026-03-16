@@ -1,29 +1,29 @@
-# Досье: @username
+# Dossier: @username
 
-## 📋 Профиль
-- **Платформа:** Telegram / Twitter / Instagram / YouTube
-- **ID:** 
-- **Имя:** 
-- **NFT holder:** да / нет / неизвестно
-- **Первый контакт:** YYYY-MM-DD HH:MM
-- **Последняя активность:** YYYY-MM-DD HH:MM
-- **Всего взаимодействий:** X
+## Profile
+- **Platform:** Telegram / Twitter / Instagram / YouTube
+- **ID:**
+- **Name:**
+- **NFT holder:** yes / no / unknown
+- **First contact:** YYYY-MM-DD HH:MM
+- **Last active:** YYYY-MM-DD HH:MM
+- **Total interactions:** X
 
-## 🏷️ Теги
-[теги через запятую: operator, team, fan, troll, investor, thoughtful, etc]
+## Tags
+[comma-separated tags: operator, team, fan, troll, investor, thoughtful, etc]
 
-## 🔗 Связи
-- **@user1** — тип связи (коллега, часто упоминает, в одном чате)
-- **@user2** — тип связи
+## Connections
+- **@user1** — connection type (colleague, frequently mentions, in same chat)
+- **@user2** — connection type
 
-## 📜 Темпоральная лента
-
-### YYYY-MM-DD
-- HH:MM — краткое описание взаимодействия
-- HH:MM — ещё событие
+## Temporal Feed
 
 ### YYYY-MM-DD
-- HH:MM — событие
+- HH:MM — brief description of interaction
+- HH:MM — another event
 
-## 📝 Заметки
-Свободные заметки о стиле общения, интересах, паттернах
+### YYYY-MM-DD
+- HH:MM — event
+
+## Notes
+Free-form notes on communication style, interests, patterns
